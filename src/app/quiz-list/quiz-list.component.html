@@ -1,0 +1,13 @@
+<input type="text" [(ngModel)]="phrase">
+active: <input type="checkbox" [(ngModel)]="activeCheck">
+<div class="list-group">
+  <!--[routerLink]="['/quiz', quiz._id]"-->
+  <a
+    class="list-group-item list-group-item-action"
+    (click)="goQuiz(quiz)"
+    [class.active]="isActive == quiz"
+    [class.disabled]="!quiz.active"
+    *ngFor="let quiz of list | async | quizFilter:activeCheck:phrase">
+      {{ quiz.title }}
+  </a>
+</div>

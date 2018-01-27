@@ -1,0 +1,9 @@
+{
+    "uid": "epam",
+    "append": true,
+    "watch": true,
+    "script": "app.js",
+    "sourceDir": "./",
+    "minUptime": 1000,
+    "spinSleepTime": 1000
+}

@@ -1,0 +1,10 @@
+<div *ngIf="quiz">
+    <h2>{{ quiz.title }}</h2>
+    <p>Number of questions: {{ quiz.questions.length }}</p>
+    <div class="questions">
+        <div class="question" *ngFor="let question of quiz.questions">
+            <h5>{{ question.title }}</h5>
+            <input type="text" name="answer['{{ question._id }}']">
+        </div>
+    </div>
+</div>
